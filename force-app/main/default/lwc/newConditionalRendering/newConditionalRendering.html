@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="NewCondtionalRendering lwc:if & lwc:else ">
+        <lightning-button variant="brand" label="Show Text" title="Show Text" onclick={clickHandler} slot="actions"></lightning-button>
+      <div class="slds-m-around_medium">
+         <template lwc:if={showText}>
+            <p>Hello World!!</p>
+         </template>
+         <template lwc:else>
+            +++++++++
+         </template>
+      </div>
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,20 @@
+<apex:page controller="List_Example_2">
+<apex:form>
+    <apex:pageBlock title="Dynamic Account">
+        <apex:pageBlockButtons location="Top">
+            <apex:commandButton value="Add" action="{!addMe}"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection>
+        <apex:inputField label="Name" value="{!acc.Name}"/>
+        <apex:inputField label="Phone" value="{!acc.Phone}"/>
+        <apex:inputField label="Industry" value="{!acc.Industry}"/>
+        <apex:inputField label="Rating" value="{!acc.Rating}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockTable value="{!accounts}" var="a" rendered="{!accounts.size>0}">
+            <apex:column value="{!a.name}"/>
+            <apex:column value="{!a.phone}"/>
+            <apex:column value="{!a.industry}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

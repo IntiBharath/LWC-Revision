@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="ApexImperativeDemo">
+        <div class="slds-m-around_medium">
+          <lightning-button label='Show Accounts' variant="brand" onclick={clickHandler}></lightning-button>
+          <template if:true={accounts}>
+            <template for:each={accounts} for:item="acc">
+                <div class="slds-box slds-box_x-small" key={acc.Id}>
+                   {acc.Name}
+                   {acc.Rating}
+                </div>
+            </template>
+          </template>
+        </div>
+
+        <div class="slads-m-around_medium"></div>
+
+        <lightning-card>
+          <div class="slds-m-around_medium">
+           <template if:true={accounts}>
+              <lightning-datatable key-field="Id" columns={columns} data={accounts}></lightning-datatable>
+           </template>
+          </div>
+        </lightning-card>
+
+    </lightning-card>
+    
+</template>

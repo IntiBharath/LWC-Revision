@@ -1,0 +1,15 @@
+p{
+    color: aqua;
+    font-size: 30px;
+    border: 1px solid red;
+}
+
+.lwc{
+    color: orange;
+    font-size: 20px;
+}
+
+.lwc:hover{
+    font-size: 50px;
+    color: blueviolet;
+}

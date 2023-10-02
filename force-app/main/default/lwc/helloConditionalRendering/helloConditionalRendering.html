@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Conditional Rendering">
+        <lightning-button variant="brand" label="Show Data" title="Show Data" onclick={clickHandler} slot="actions"></lightning-button>
+        <div class="slds-m-around_medium">
+             <template if:true={isVisible}>
+               <p> Work Hard nothing comes free in life</p>
+             </template>
+             <template if:false={isVisible}>
+                <p>Power comes in response to a need, Not to the desire. You have to create that need</p>
+             </template>
+             <lightning-input label="Enter Hello to see the info" type="text" onkeyup={changeHandler}></lightning-input>
+             <template if:true={helloMethod}>
+                <p> Hurray! you have entered the correct input</p>
+             </template>
+        </div>
+
+    </lightning-card>
+    
+</template>

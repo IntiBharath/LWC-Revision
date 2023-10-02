@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="getObjectInfo Adapter As function">
+         <div class="slds-m-around_medium">
+            {defaultRecordTypeId}
+         </div>
+    </lightning-card>
+    <div class="slds-m-around_medium"></div>
+    <lightning-card title="getObjectInfo Adapter As a property">
+        <template if:true={objectInfoProperty.data}>
+            <div class="slds-m-around_medium">
+                {objectInfoProperty.data.defaultRecordTypeId}
+            </div>
+        </template>
+   </lightning-card>
+    
+</template>

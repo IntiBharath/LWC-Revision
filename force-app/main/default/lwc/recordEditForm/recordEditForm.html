@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="lightning-record-edit-form">
+        <lightning-record-edit-form object-api-name={objectName}>
+            <lightning-messages></lightning-messages>
+            <lightning-input-field field-name={fields.Name}></lightning-input-field>
+            <lightning-input-field field-name={fields.Title}></lightning-input-field>
+            <lightning-input-field field-name={fields.Email}></lightning-input-field>
+            <lightning-input-field field-name={fields.Account}></lightning-input-field>
+            <lightning-button label="Save" type="submit" variant="brand" class="slds-m-around_xx-small"></lightning-button>
+            <lightning-button label="Reset" type="reset"></lightning-button>
+            <lightning-button label="Cancel" onclick={resetHandler}></lightning-button>
+
+        </lightning-record-edit-form>
+
+    </lightning-card>
+
+    <div class="slds-m-around_medium"></div>
+
+    <lightning-card title="Adding Custom label fieldNames">
+        <lightning-record-edit-form object-api-name={objectName}>
+            <lightning-messages></lightning-messages>
+            <lightning-input-field field-name={fields.Name}></lightning-input-field>
+            <lightning-input-field field-name={fields.Title}></lightning-input-field>
+            <label class="slds-m-left_xx-small">Enter Your Email</label>
+            <lightning-input-field variant='label-hidden' field-name={fields.Email}></lightning-input-field>
+            <lightning-input-field field-name={fields.Account}></lightning-input-field>
+            <lightning-button label="Save" type="submit" variant="brand" class="slds-m-around_xx-small"></lightning-button>
+            <lightning-button label="Reset" type="reset"></lightning-button>
+            <lightning-button label="Cancel" onclick={resetHandler}></lightning-button>
+
+        </lightning-record-edit-form>
+
+    </lightning-card>
+    
+</template>

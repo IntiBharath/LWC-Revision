@@ -1,0 +1,12 @@
+<apex:page controller="Soql_With_Map">
+    <apex:form>
+        <apex:pageBlock>
+            <apex:pageBlockTable value="{!opptyMap}" var="a"> <!-- a is Key in the Map-->
+                <apex:column value="{!a}" headerValue="Key" /> 
+                <apex:column value="{!opptyMap[a]}" headerValue="Value"></apex:column> <!-- opptyMap[a] is the value in th Map -->
+
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

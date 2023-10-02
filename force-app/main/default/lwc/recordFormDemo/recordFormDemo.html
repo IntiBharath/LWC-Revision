@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Create Record Using Lightning-Record-Form">
+    <lightning-record-form
+    object-api-name={objectName}
+    fields={fieldList}
+    onsuccess={successHandler}>
+    </lightning-record-form>
+    </lightning-card>
+
+    <div class="slds-m-around_medium"></div>
+
+    <lightning-card title="Displaying Exsisting Record Using Lightning-Record-Form">
+        <lightning-record-form
+        record-id={recordId}
+        object-api-name={objectName}
+        fields={fieldList}
+        onsuccess={successHandler}>
+        </lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="Displaying Exsisting Record(ReadOnly) Using Lightning-Record-Form">
+        <lightning-record-form
+        record-id="0012w00001mGOj2AAG"
+        object-api-name={objectName}
+        fields={fieldList}
+        onsuccess={successHandler}
+        mode="readonly">
+        </lightning-record-form>
+    </lightning-card>
+
+    
+    <lightning-card title="Displaying RecordId dynamically(by using layout-type proerty) by Using Lightning-Record-Form">
+        <lightning-record-form
+        record-id={recordId}
+        object-api-name={objectApiName}
+        layout-type="Compact"
+        onsuccess={successHandler}
+        mode="edit"
+        columns="2">
+        </lightning-record-form>
+    </lightning-card>
+    
+</template>

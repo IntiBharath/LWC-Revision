@@ -1,0 +1,20 @@
+<apex:page controller="Soql_Example_5">
+    <apex:form>
+        <apex:pageBlock title="Accounts">
+            <apex:outputLabel value="Enter Name"/>
+            <apex:outputLabel value="{!searchText}"/>
+            <apex:pageBlockButtons location="Top">
+                <apex:inputText value="{!searchtext}"/>
+                <apex:commandButton value="Search Rating" action="{!searchTextInfo}" />
+                <apex:commandButton value="SearchLike Name" action="{!likeSearch}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!accounts}" var="a" rendered="{! !ISNULL(accounts)}">
+                <apex:column value="{!a.Id}"/>
+                <apex:column value="{!a.Name}"/>
+                <apex:column value="{!a.Rating}"/>
+                <apex:column value="{!a.Phone}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

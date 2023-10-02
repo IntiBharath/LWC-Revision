@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Child To Parent Communication">
+        <lightning-button label="Show Modal" variant="brand" onclick={clickHandler}></lightning-button>
+        <h1>{msg}</h1>
+        <template if:true={showModal}>
+            <c-c2p-modal-component onclose={closeHandler}></c-c2p-modal-component>
+        </template>
+    </lightning-card>
+</template>

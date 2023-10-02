@@ -1,0 +1,29 @@
+<apex:page controller="Soql_With_Like_Example_6">
+    <apex:form id="One">
+        <apex:outputLabel value="{!query}"/>
+        <apex:pageBlock title="Dynamic Query">
+        <apex:pageBlockButtons location="Top">
+            <apex:commandButton value="search" action="{!search}" reRender="One" />
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection>
+            <apex:pageBlockSectionItem>
+                <apex:outputLabel value="Name" />
+                <apex:inputText value="{!name}"/>
+            </apex:pageBlockSectionItem>   
+            <apex:pageBlockSectionItem>
+                <apex:outputLabel value="StageName" />
+                <apex:inputText value="{!stageName}"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:pageBlockTable value="{!opptys}" var="a">
+            <apex:column value="{!a.Id}"/>
+            <apex:column value="{!a.AccountId}"/>
+            <apex:column value="{!a.Name}"/>
+            <apex:column value="{!a.stageName}"/>
+            <apex:column value="{!a.closeDate}"/>
+            <apex:column value="{!a.Amount}"/>
+        </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>
